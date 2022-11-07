@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    console.log(10);
+    console.log(20);
+    console.log(30);
+    let data = {
+            email: "alex@gmail.com",
+            password: "123456"
+           }
+        fetch('http://localhost:8080/user/validate',data)
+        .then(response => { 
+            console.log(response.data);
+             if(response.data === "valid"){
+                alert("Login SUccess")
+             }else{
+                alert("Please verify crdentials");
+             }        
+        })   
+    //api call   request  -> response    
+    console.log(40);
+    console.log(50);
+    console.log(60);
+    console.log(70);
+</script>
+<body>
+    
+</body>
+</html>

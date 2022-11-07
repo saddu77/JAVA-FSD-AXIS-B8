@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<script>
+    console.log("Loading Data from Products Get API");    
+
+    function addProduct(){
+        var pname = document.getElementById('pro-name').value;
+        var pqty = document.getElementById('pro-qty').value;
+        let data = {
+            productName: pname,
+            productQty: pqty
+       }
+
+        fetch('http://localhost:8080/products/create',{
+        method:"POST",
+        body: JSON.stringify(data),
+        headers : {
+            "Content-Type":"application/json",
+            "Access-Control-Allow-Origin":"*"
+        }
+       }).then(response => response.json())
+         .then(json => console.log(json));
+         
+         alert("Product Added Successfully !!! ")
+    }
+
+
+    async function getProducts(){
+        const resp = await fetch('http://localhost:8080/products/fetch');
+        var data = await resp.json();
+        console.log(data);
+        let tab = `<tr> 
+                   <th> ID </th>
+                   <th> Product </th>
+                   <th> Quantity </th>
+                   <th> Edit </th>
+                   <th> Delete </th>
+                   </tr>`;
+                   for( let p of data){
+                    tab += `<tr> 
+                            <td>${p.productId}</td>
+                            <td>${p.productName}</td>
+                            <td>${p.productQty}</td>
+                            <td> <a>EDIT</a> </td>
+                            <td> <a>DELETE</a></td>                            
+                        </tr>`
+                   }
+                   document.getElementById("products-table").innerHTML = tab;
+    }
+</script>
+<body>
+
+    <div id="add-product">
+        <h2> ADD Products: </h2>
+       Product Name: <input type="text" id="pro-name" /> <br /> <br />
+       Product Qty: <input type="number" id="pro-qty"/> <br /> <br />
+       <button onclick="addProduct()"> ADD Product</button>
+    </div>
+
+    
+    <div id="get-product">  
+        <h2 id="back"> List Products: </h2>     
+        <button onclick="getProducts()"> List Products </button>
+        <table id="products-table">      
+            
+        </table>
+
+       
+    </div>
+
+    <h2 id="back"><a href="./home.html"> Back </a>  </h2>
+</body>
+</html> 

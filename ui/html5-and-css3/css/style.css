@@ -1,0 +1,73 @@
+body{
+    background-color: goldenrod;
+}
+#login-div,#signup-div{
+    border: 1px solid white;
+    width: fit-content;
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10%;
+    color: white;
+}
+a{
+    color: white;
+}
+
+.home-div{
+    height: 100px;
+}
+
+ul#horizontal-list {
+    list-style: none;
+}
+
+ul#horizontal-list li{
+    display: inline;
+    color: white;
+    font-size: 24px;
+    margin: 2%;
+}
+
+ul li a#logout{
+    margin-right: 20px;
+    float: right;
+    text-decoration: none;
+}
+
+ul li a#products{   
+    text-decoration: none;
+}
+
+table,h2{
+    color: white;       
+    
+}
+
+table,th,td  {
+    border: 1px solid white;
+    border-collapse: collapse;    
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+th,td{
+    padding: 15px;
+}
+
+#back{
+    text-align: center;
+}
+
+#add-product{
+    float: left;
+    margin-left: 10%;
+
+}
+
+#get-product{
+    float: right;
+    margin-right: 20%;
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var cookie1;
+    function setCookie(){
+        document.cookie = "username=admin";
+        cookie1 = document.cookie;
+    }
+    function getCookie(){
+        if(document.cookie.length == 0){
+            alert("Cookie not available")
+        }else{
+            alert(document.cookie);
+        }       
+    }
+    function updateCookie(){
+        document.cookie = "username=john";
+    }
+    function deleteCookie(){
+        document.cookie = cookie1 + ";max-age=0";
+        cookie1 = document.cookie;
+        alert("cookie is deleted");
+    }
+</script>
+<body>
+    <input type="button" value="setCookie" onclick="setCookie()" >
+    <input type="button" value="getCookie" onclick="getCookie()" >
+    <input type="button" value="updateCookie" onclick="updateCookie()" >
+    <input type="button" value="deleteCookie" onclick="deleteCookie()" >
+</body>
+</html>

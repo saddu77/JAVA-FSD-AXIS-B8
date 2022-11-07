@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<script>
+    function signup(){
+       var uname = document.getElementById("email").value;
+       var pwd = document.getElementById("password").value;
+      
+       let data = {
+        email: uname,
+        password: pwd
+       }
+       //console.log(JSON.stringify(data));
+       fetch('http://localhost:8080/user/create',{
+        method:"POST",
+        body: JSON.stringify(data),
+        headers : {
+            "Content-Type":"application/json",
+            "Access-Control-Allow-Origin":"*"
+        }
+       }).then(response => response.json())
+         .then(json => console.log(json));
+         
+    }
+</script>
+
+<body>
+    <div id="signup-div">
+        <h2> Sign Up </h2>
+        Email: <input type="text" id="email" /> <br /> <br />
+        Password: <input type="password" id="password" /> <br /> <br />
+        <input type="submit" value="SIGN UP" onclick="signup()"/> <br /> <br />
+        <a href="./login.html"> Already Registerd ?? Please Login </a>
+    </div>
+</body>
+</html>

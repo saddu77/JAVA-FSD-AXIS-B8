@@ -1,0 +1,1386 @@
+	Class and Objects
+
+	Functions:
+	---------
+		fun functionName(){
+		//stmts;
+		}
+
+		functionName()
+
+
+		Function with parameters
+		Returning values from a function
+		
+		Lambda Function:
+		----------------
+				Function with no name.
+				Defined with {} which takes variables as parameter and body of a function.
+				Syntax:
+				-------
+					{variable -> function_body}
+
+		AIC: Annonymous Inner Class
+
+		Kotlin Collections:
+		===================
+		Overview:	
+		---------
+				A collection contains a number of objects of the same type.
+				Objects in a collection are called elements or items.
+
+				Example:
+					All Employees in a company forms a collection.
+
+				Collection Types:
+				==================
+
+				1) Immutable collection (or collection)
+								Methods of immutable collection that supports read functionlities :
+
+
+						List  listOf():
+								List is an ordered collection with acess to elements by indices (integer numbers that reflect position).
+								Elements can occur more than once in a list.
+
+						Set    setOf():
+								Set is a collection of unique elements . It reflects the mathematical abstraction 
+								of set.(group of objects without repetations)
+
+						Map    mapOf():(or dictionary)
+								set of key-value pairs.Keys are unique and each of them maps to exactly one value.
+
+
+				2) Mutable Collection:
+						Mutable collections supports both read and write functionalities.
+						
+						List  ArrayList<T>()
+						      arrayListOf()
+						      mutuableListOf()
+
+
+						Map   HashMap
+						      hasMaoOf()
+						      MutableMapOf()
+
+
+						Set  hasSetOf()
+						     mutableSetOf()
+
+
+		======================================================================================================================
+		    CONNECTOR <- MySQL Connector JDBC or ODBC (add jars into project)
+		MySQL + Kotlin 
+		---------------
+
+			mysql:
+			------
+
+			host:localhost
+			port:3306
+			username: root
+			password: admin
+
+			Database: sampledb
+			Table:     users
+			             id      name
+				      1      Alex
+				      2      John
+				      3      Jimmy
+
+
+			db.kt
+			-----
+
+			main(){
+			//code to connect to db
+			//fetch all records from users table in sampledb			
+			//results to print
+			}
+		
+			outPut:
+			=======
+				1,John
+				2,Jimmy
+				3,Julie
+
+		download mysql connector jar:
+		-----------------------------
+		Adding .jar file to kotlin Project
+		File -> Project STructure -> Modules -> Dependencies -> 
+			Add (+) -> Jars or Directories -> (browse to .jar file)
+			-> click Apply -> OK
+
+
+		Insert
+		Select
+		Update
+
+	==============================================================================
+	Users:
+	------ 
+              PK,AI
+		id  name   age     email        phone         city    state  country   pincode
+		1   John    23  john@gmail.com  0987654321  Bangalore  KA     India     56004
+
+
+		CRUD:
+		----
+			users-crud.kt 
+		Create DataBase : demodb
+		Create Table:     users
+		manually perform sql queries in commandline
+	
+		insert
+                select
+		update
+		delete
+		==================================================
+		create new Project in IntelliJ with name : MyDemoDBApp
+		Add .jar file into the project
+		compile and execute the users-crud.kt or users-crud.kts
+
+	--------------------------------------------------------------------------
+
+	9:30 AM to 11:15 AM <- Lab(practicals)
+       	15 mins Break1
+	11:30 AM TO 1:30 PM <- SESSION
+	30 mins Lunch
+	2:00 PM TO 3:45 PM <-  LAB(practicals)
+	3:30 to 3:45 PM    <- Break2
+	3:45 PM TO 5:45 PM <-  SESSION
+	--------------------------------------------------------------------------
+		
+	Software Engineering:
+	=====================
+				well defined scientific principles,techniques and procedures.
+
+	20 partcipants => 20 Modules
+	----------------------------
+
+	organised instructions
+
+
+	High Quality
+	Cost Effective
+	Reliable
+	Secured
+	Dynamic(upgrades etc)
+
+	SDLC:
+	-----
+		Sotware Development Life Cycle
+		
+		1. Requirements Gathering : (CRS SRS FRS BRS )
+		2. Analysis or Feasibilty Study
+		3. Design : ( HLD , LLD) ---> FDD TDD
+		4. Coding  <- sonarcube
+		5. Testing
+		6. Implementation    ===> CI/CD
+		7. Maintainence.
+
+
+			Users Module
+			Session Management
+			Logs
+			Role Management
+			Reporting
+
+		sonarcube: High Quality code
+
+		SonarCube is an open-source Software Quality Platform.
+		It saves the calculated measures in a database and showcases
+		 them in a rich web based dashboard.
+		It provides trends and leading indicators.
+
+
+
+
+		D1 D2 D3 D4 ...... Dn
+
+
+
+		NoSQL: 
+			non tabular databases and store data differently than relational 
+       			tables.
+
+		 	Document  -JSON Objects.
+			key-value
+
+			Flexible Schemas
+			Fast queries due to the data model
+			Ease of Use
+			
+			id   email           password
+			1   john@gmail.com     123456
+
+
+			{
+			id:"ghhfghf56r564654676",
+			email:"John@gmal.com",
+			password:"123456"
+			}
+			{} <- JSON Object
+			[] <- JSON Array
+
+			Table               Collection
+			  rows & cols               document
+
+
+			MongoDB commands:
+			-----------------
+
+			1. show dbs; list all databases
+			2. use sampledb; to select db 
+			3. db; lists selected db name or current db;
+			4. show collections;
+			5. db.createCollection("users");
+		create  6. db.users.insertOne({email:'john@gmail.com',password:'123456'});
+		read	7. db.users.find();
+		update  8. db.users.update({ _id: ObjectId("63048850b0e1574323aadc70")},
+				{$set:{passowrd:'88888'}});
+		delete  9. db.users.remove({_id: ObjectId("6304887bb0e1574323aadc71")})
+		
+			10.db.users.update({email:'john@gmail.com'},{$set:{age:23}})
+
+			11.db.users.find({age:{$eq:23}})  [Query Operator]
+
+			12.db.users.find({age:{$gt:23}})
+		
+			13.db.users.find({age:{$gte:23}})
+			==========================================================
+			Topic:
+			------
+				Objective
+				Syntax
+				Example
+
+			MongoDB: CRUD <- Users
+					 Products or Movies or Tickets or Module..n
+			Aggreagtion  <- Employee
+					
+
+			Assignments + Case Study (MongoDB)
+			Assessments <- weekly
+
+
+			=========================================================
+
+			MongoDB:
+			=======
+			Steps to import moviesList.json in mongoDB:
+
+			1) Login into mongosh
+ 			2) create a new db : movie
+			3) configure mongoimport by navigating to 
+				https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools
+			4) set up the environment path variable
+				(C:\Program Files\MongoDB\Tools\100\bin)
+			5) Open a new command prompt and execute the following command:
+			    mongoimport --jsonArray --db movie --collection movies --file moviesList.json
+			6) Upon success :
+			     88 document(s) imported successfully. 0 document(s) failed to import.
+
+			
+
+db.movies.aggregate([{ "$group": { _id: { country: "$country", actors: "$actors" }, count: { $sum: 1 } } }])
+
+			
+db.movies.find({$and:[{title:{$eq:'Vertigo'}},{year:{$eq:1958}}]})
+
+db.movies.aggregate([{$group:{_id:'$country',actors:{$sum:1},title:{$sum:1}}}])
+
+
+		MONGODB DOESNOT SUPPORT PRIMARY KEY OR FOREIGN KEY RELATIONSHIPS.
+		-------------------------------------------------------------------
+
+		
+		Passenger:
+		Train:
+		
+		Ticket:
+		-------
+		    Passenger
+		    Train
+
+==========================================================================================
+
+	Aggregation:  
+	------------
+		MongoDB Aggregation is a pipeline that process the 
+		data on each pipeline stage.
+
+	Input ---->  $match  --> $group  ---> $sort   ---> output
+
+
+		pipeline = [
+			{$match:{...}},
+			{$group:{...}},
+			{$sort: {...}}
+		]
+		db.collectionName.aggregate(pipeline,options)
+
+
+		mongoimport --jsonArray --db mydb --collection test --file my-data.json
+
+		db.test.aggregate([{$match:{state:"MA"}}])
+		db.test.aggregate([{ $match: { state: "MA" } },{$count:"Number of records"}])
+		db.test.aggregate([{ $match: { state: "MA" }},{$group:{_id:"$city"} }])
+		db.test.aggregate([{ $match: { state: "MA" }},{$group:{_id:"$city"} }]).sort({_id:-1})	
+		db.test.aggregate([{ $match: { state: "MA" }},{$sort:{pop:-1}},{$limit:3}])
+		db.test.aggregate([{ $match: { state: "MA" }},{$group:{_id:"$city"} },{$sort:{pop:1}}])
+
+		db.ticket.update({'ticket_no':1},{$unset:{'train.destination':'Delhi'}})
+
+
+		MongoDB + Kotlin:
+		=================
+		Jar File: https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver/
+
+			Step1: Connectivity to MOngoDB
+			Step2: Read Documents
+			Step3: Insert Documents
+			Step4: Update Documents
+			Step5: Delete Documents
+
+
+	Design Patterns:
+	----------------
+		solution or best practises to software design problem found in real world 
+                appication development
+
+			Elements of Reusable Object Oriented Software:
+			
+			1) Creational Patterns:
+				create a objects while hiding the creation logic,rather than
+			   instantiating objects directly using new operator.
+
+				Factory method:
+				---------------
+				interface in Java:
+				------------------
+				public interface Task{
+				  void scan();
+				}
+
+				concrete class:
+				---------------
+				public Class Test1 implements Task{				 
+				public void scan(){
+				  System.out.Prinltn("Scanning....Test1");
+				}
+				}
+				
+				public Class Test2 implements Task{				 
+				public void scan(){
+				  System.out.Prinltn("Scanning....Test2");
+				}
+				}
+
+				public Class Test3 implements Task{				 
+				public void scan(){
+				  System.out.Prinltn("Scanning....Test3");
+				}
+				}
+				//to get object of type task
+				public class TaskFactory{
+					public Task getTask(String taskType){
+					if(taskType == null){
+						return null;
+					}
+
+					if(taskType.equalsIgnoreCase("Test1")){
+					 return new Test1();
+					}
+
+					else if(taskType.equalsIgnoreCase("Test2")){
+					 return new Test2();
+					}
+
+					else if(taskType.equalsIgnoreCase("Test3")){
+					 return new Test3();
+					}
+					return null;
+				}
+
+
+				
+
+
+			2) Structural Patterns:
+				design patterns concern class and object composition.
+				Inheritance is used to compose interfaces and define ways to
+				compose objects to obtain new functionalities.
+
+			3) Behavioral Patterns:
+
+				concerned with communication between objects. 
+
+
+	============================================================================
+
+
+	
+
+	Monday:
+		Revisions Sessions
+		Core Java + Kotlin 
+
+		Session1:
+		Session2:
+		Core Java:
+			-> Installations
+			-> HelloWorld Execution
+			-> variables
+			-> operators
+			-> conditions
+			-> loops
+			-> functions
+			-> functions with parameters
+			-> OOPS:
+				class
+				objects
+				Inheritance
+				Polymorphism
+				Encapsulation
+				Abstraction
+				Interface
+				Exceptions
+				File Handling
+				Threads
+				Collections
+
+		Lab1: Train Reservation Systems(generating a train
+			 ticket and printing the ticket to a File.)
+		Lab2: 
+		
+
+	Tuesday:
+		Revision Sessions
+
+		Kotlin:
+		-------
+		Lab1: Train Reservation Systems(generating a train
+			 ticket and printing the ticket to a File.)
+		Lab2:
+		
+			
+============================================================================================
+
+	Java :
+	------
+	Programming Language
+	Object Oriented
+
+	JAVA SE (JAVA STANDARD EDITION)
+	JAVA EE(JAVA ENTERPRISE EDITION)
+	JAVA ME(JAVA MICRO EDITION) <- Mobile Apps
+	JAVA FX
+	
+	
+
+	Web Applications:
+	----------------
+		Online SHopping
+		Online Banking
+		Online Ticketing
+		==============
+		apps work over the browser through internet
+
+	Installations:
+	--------------
+			Install JDK(Java Development Kit)
+				JVM: Java Virtual Machine
+				JRE: Java Runtime Environment
+
+			.java ---> .class
+
+
+			java --version
+			javac --version
+
+			Eclipse IDE (Integrated Development Environement)
+			
+	Polymorphism:
+	-------------
+	poly: many
+	morphic: behavior
+
+	Function OverLoading:
+	---------------------
+	add(int a,int b){
+
+	}
+
+	add(int a,int b,int c){
+
+	}
+
+	obj.add(20,30,40);
+	obj.add(40,40);
+	==============================================
+	Rule1: same function name,same return type but different number of parameters
+	Rule2: same function name,same return type same number of parameters 
+		 but with different paramter type.
+
+	==========================================================================
+	Function OverRiding:
+	--------------------
+	void display(){
+	}
+	
+	void display(){	
+	}
+
+	Rule1: same function name ,same return type ,same number of parameters
+	Rule2: Inheritance has to happned.
+
+	===========================================================================
+
+	Encapsulation:
+	===============
+	
+	Exceptions:
+	----------
+
+		try catch
+		throw throws
+		finally
+		custom exception
+	
+
+	File Handling:
+	=============
+
+	Threads:
+	========
+		Thread is a light weight sub process.
+			
+		Thread can be created in Java by two ways:
+		1) By Inheriting Thread class 
+		2) By Implementing Runnable interface	
+
+	===================================================================
+
+	Webservices concepts:
+	SOA Architecture
+	SOAP vs REST REST Webservices
+	Introduction to RMM
+
+	==================================================================
+
+	JSON:
+		Java Script Object Notation
+
+	APIs:
+		Application Programming Interfaces.
+				
+
+	web Apps:
+	---------
+
+	COnfiguration of SpringBoot:
+	===========================
+	STS 4
+
+					
+	Step1: Spring Boot Project in STS:
+	----------------------------------
+	File -> New -> Spring Starter Project 
+
+	HelloWorld Request
+
+	Start
+	Stop
+	=========
+	Started -> changes ---> Relaunch not Restart
+	=========
+	
+	============================================================================
+
+	created Database;
+	created Tables;
+	created Fields;
+	
+	JDBC connectivity
+	username password port <- dbconnection Object
+
+	ORM: Object Relational Mapping
+
+	SpringBoot JPA:
+	--------------
+	Java Persistance API follows ORM.
+
+	POJOs
+	JPA
+	Controllers
+
+	CRUD in SpringBoot + MySQL
+		1. applicatioim.properties (specified mysql details)
+		2. POJO : User
+				Entity,Table,Id,Column Names
+				Default and Parameterised Constructor
+				Setters and Getters
+				toString()
+		3. Controller: UserController
+				POST GET PUT DELETE
+		4. Repository:
+				Interface : UserRepository
+		
+			POSTMAN
+
+	
+	CRUD in SpringBoot + NoSQL(mongodDB)
+
+	localhost:8080  ----> Users
+
+	Spring HATEOAS:
+	===============
+	 		Hypermedia as the Engine of Application State.
+			Its a library of APIs.
+
+			GET: http://localhost:8080/users/fetch/1
+
+
+	=====================================================================================================================================
+
+					MONOLITHIC ARCHITECTURE
+	SpringBoot + mySQL
+	------------------
+
+		Tomcat -> 8080                      						MySQL -> 3306
+												username:root
+												password:admin		
+											 	database:sampledb
+
+
+				POST -> http://localhost:8080/user/create
+				GET  -> http://localhost:8080/user/fetch                         TableName :users
+		Users:		GET  -> http://localhost:8080/user/fetch_user/{id}  
+				PUT  -> http://localhost:8080/user/update_user/{id}
+			      DELETE -> http://localhost:8080/user/delete_user/{id}
+
+		
+		Products:	POST -> http://localhost:8080/product/create
+				GET  -> http://localhost:8080/product/fetch		         TableName: products
+				GET  -> http://localhost:8080/product/fetch_product/{id}
+				PUT  -> http://localhost:8080/product/update_product/{id}
+			      DELETE -> http://localhost:8080/product/delete_product/{id}
+
+=================================================================================================================================================
+
+					MICRO SERVICES ARCHIECTURE
+
+		=> Users    ---> 3001  ----> usersdb
+			userId
+			email
+			password
+					RestTemplate
+
+		=> Products ---> 3002  ----> productsdb
+			productId
+			productName
+			productQty
+'			productCost
+			userId
+
+			Get Products(3002)( by userId while user serive running on port 3001)
+		
+		=> service-registry  --> 8761
+
+		
+		 
+  			=> Service-Registry
+			=> Modilfied pom.xml
+	
+			1 --->  <spring-cloud.version>2021.0.4</spring-cloud.version>
+
+			2----> <dependency>
+      				<groupId>org.springframework.cloud</groupId>
+      				<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+  			    </dependency>
+			3 -----> <dependencyManagement> + <build>
+				<dependencyManagement>
+    				<dependencies>
+     				 <dependency>
+     				   <groupId>org.springframework.cloud</groupId>
+       					 <artifactId>spring-cloud-dependencies</artifactId>
+       					 <version>${spring-cloud.version}</version>
+   					 <type>pom</type>
+      				         <scope>import</scope>
+     				  </dependency>
+    				 </dependencies>
+  				</dependencyManagement>
+
+  				<build>
+    					<plugins>
+      						<plugin>
+        						<groupId>org.springframework.boot</groupId>
+       							 <artifactId>spring-boot-maven-plugin</artifactId>
+    						  </plugin>
+   					 </plugins>
+  				</build>
+			
+		
+
+			=> Application.yml
+
+
+
+			  boot:
+    admin:
+      client:
+        instance:
+          management-base-url: http://localhost:3000
+
+
+
+=============================================================================================
+		Hystrix : http://localhost:3000/actuator/hystrix.stream
+
+
+
+
+==========================================================================================
+
+Feign client:
+=============
+		Its a declarative web service client.
+		It makes writing web service clients easier.
+
+		To work with Feign we have to create an interface and annotate it.
+
+
+
+			APIs  ---> 3000
+
+			Feign-client ---> 3001
+
+==============================================================================================================
+
+o Reactive Programming:
+  =====================
+	building asynchronous,non-blocking,and event driven applications which can be easily scalable.
+	
+		Manually ---> Online Transactions  ----> UPI Payments
+				(web)                    (mobile banking)
+
+	Event:
+	-----
+		Each event is published to subscribers while ensuring that subscribers are never overwhelmed.
+		 => Mono and Flux are implementations of the Publisher interface.
+
+			Flux will observe 0 to N items and eventually terminate successfully or not.
+			
+		SpringBoot Apps
+		Spring Webflux
+		Spring Reactive Data: MongoDB
+		Spring security : Reactive Webflux
+		Lombok
+
+
+		./gradlew wrapper --gradle-version 6.0.1
+
+
+
+
+		Java
+		MySQL
+		MongoDB
+		CaseStudy
+
+		Responsibilty:
+		=============
+				To develop the WebApp
+		
+				Handle Data
+				===========
+				
+				Online Shopping:
+				===============
+				
+				Registeration or SignUp:
+							userdata (save)  =======> DataBase  
+				Login:
+					user details provided
+				UI
+	
+						Standard Frameworks
+						Distrubuted System
+						Responsive 
+					
+				=======================================================================================================
+				SpringBoot
+				auto-configuration and starter dependencies with a general idea of how Spring Boot simplifies Java development.
+
+				Java Program gets compiled then it gets executed
+
+				Encapsulation : POJO :                         @Bean  -> container
+							Users
+								email	
+								password
+
+				Annotations:
+				Generics:
+					ArrayList<Integer> numbers = new ArrayList<Integer>(); <- collections
+					ArrayList<String> names = new ArrayList<String>(); 
+			RestAPIs:
+			========
+				http://localhost:8080/user/create   <--- HATEOS
+
+				POST GET PUT DELETE
+
+
+				200 OK
+				The request succeeded. The result meaning of "success" depends on the HTTP method:
+
+					GET: The resource has been fetched and transmitted in the message body.
+					HEAD: The representation headers are included in the response without any message body.
+					PUT or POST: The resource describing the result of the action is transmitted in the message body.
+					TRACE: The message body contains the request message as received by the server.
+
+				204 No Content
+					There is no content to send for this request, but the headers may be useful. The user agent may update its cached headers for this resource with the new ones.
+
+				500 Internal Server Error
+					The server has encountered a situation it does not know how to handle
+
+
+				404 Not Found
+					The server can not find the requested resource. 
+					In the browser, this means the URL is not recognized. 
+					In an API, this can also mean that the endpoint is valid but the resource itself does not exist.
+					 Servers may also send this response instead of 403 Forbidden to hide the existence of a resource from an 
+					 unauthorized client.
+					This response code is probably the most well known due to its frequent occurrence on the web.
+
+
+		
+	
+
+	
+	
+					Spring WebFlux:
+				Reactive:
+					non blocking,async,event driven driven.......
+
+
+				WebFlux:
+				--------
+					to process request WebFlux Config.
+					It declares the required beans and provides a higher level configuration callback API to customize it.
+
+
+					build Non-Blocking clients using WebClient Spring WebFlux:
+					==========================================================
+						
+
+		kumaresh.gupta@u-next.com
+		
+
+		UI : html5 css3 js Bootstrap React
+		=================================
+		Backend: Java,Kotlin,Spring Boot
+		Databases: MySQL and NoSQL
+		=================================
+		Testing: Selenium POM
+		Deployments: CI/CD using Jenkins,Docker,Kubernetes,aws server.
+		==============================================================
+
+		CaseStudy:
+		=========
+
+			
+		
+			Synopsis:
+
+				
+				Requirement	
+				Analysis
+				Design
+				------
+				Coding
+				Testing
+				-------
+				Implementation
+				-------
+				Maintainence
+		==========================================================================================================================
+		Design:
+		--------  SYSTEM ARCHITECT(Solutioning or based on the client requierment have to prepare design)
+
+		Web App Development:
+		-------------------
+		Model: MySQL or NoSQL  <- localhost:3306 or localhost:27017
+							    127.0.0.1
+		Controller: <- localhost:8080
+				Java,Kotlin,Spring Boot,SpringBoot Micro Services
+
+		UI: html5 css3 js BootStrap React NextJS  <- localhost:3000
+
+		Tools:
+			mysql or mongodb ----> localhost:3306
+			jdk11
+			Eclipse or IntelliJ Idea or STS ( Run As ---> SpringBoot App) ---> App is running at port 8080 
+			NodeJS- node and npm ---> localhost:3000
+
+			-----------------------------------------
+			development mode is fine
+			-----------------------------------------
+			DEPLOYMENT:
+			----------	
+			17 Developers: 17 Modules
+			--------------------------
+			====================================================
+
+			Module1      UI     Backend DB
+			 D1	  Users    USERS-SERVICE    UsersDB
+
+
+
+			D17      .......   ..........       ......
+
+			SCM : GitHub 
+				upload code with .gitignore [node_modules and package-lock.json]
+
+				Merge --> common node_modules + package-lock.json
+
+
+			Development -> Push Code into Git ---> merge ---> build ---> deploy
+			Manual Deployment will be a challenge
+			DevOps
+
+			Docker:
+			======
+			=====================================================
+			build :
+			-------
+				maven or gradle
+
+			
+			ALREADY APP IS UP AND RUNNING...... <==========  END USER
+				
+
+		==========================================================================================================================
+			
+			Deploy --------> Development Server or Staging Server
+	
+			Staging environments are made to test codes, builds, and updates to ensure quality under a production-like 
+				environment before application deployment.
+
+			Stable,Up and running,secured,easy to acess : Accessiblity,Reliabilty,Perfomance....
+
+
+
+					Server
+
+			AWS : Amazon Web Services:
+			EC2
+	
+				13.234.114.99
+
+				sudo mkdir -p /var/www/13.234.114.99/html
+				sudo chown -R $USER:$USER /var/www/13.234.114.99/html
+				sudo chmod -R 755 /var/www/13.234.114.99
+				nano /var/www/13.234.114.99/html/index.html
+					
+				sudo nano /etc/nginx/sites-available/13.234.114.99
+
+
+				server {
+			        listen 80;
+			        listen [::]:80;
+
+			        root /var/www/your_domain/html;
+ 			       index index.html index.htm index.nginx-debian.html;
+
+ 			       server_name your_domain www.your_domain;
+
+			        location / {
+ 		               try_files $uri $uri/ =404;
+ 			       }
+			    }
+
+			  sudo ln -s /etc/nginx/sites-available/13.234.114.99 /etc/nginx/sites-enabled/
+
+				
+					
+			config <- urls or IPs
+			.env  <- settings
+
+			config_url="http://13.234.114.99"
+
+
+			axios.post(${config_url}/user/create){
+			}
+
+
+
+		======================================================================================================================
+
+			
+			Docker:Develop faster. Run anywhere.
+			------
+				Installation
+				Hello World execution
+				docker --version
+				docker run hello-world
+							Hello from Docker!
+
+							 1. The Docker client contacted the Docker daemon.
+ 							 2. The Docker daemon pulled the "hello-world" image from the Docker Hub. (amd64)
+ 							 3. The Docker daemon created a new container from that image which runs the
+                                                             executable that produces the output you are currently reading.
+							 4. The Docker daemon streamed that output to the Docker client, which sent it to your terminal.
+			
+			image : A Docker image is a file used to execute code in a Docker container.
+			Docker Hub
+			container 
+			Docker client
+
+		======================================================================================================================
+		http://localhost:port/user/create
+
+		mysql --> 3306
+		jdk11 --> 8080
+		node ---> 3000
+
+
+
+		docker-compose.yml
+		Dockerfile
+		.env 
+			Make our APIs up and running with docker-compose up -d 
+
+
+
+			docker tag local-image:tagname new-repo:tagname
+			docker push new-repo:tagname
+
+			docker push saddu/sample-web-app:tagname
+			=========================================
+			docker tag local-image-name username/new-created-repo-name:tagname
+			docker push username/new-created-repo-name:tagname
+
+			docker tag upmyapp-app saddu/sample-web-app:myapp
+			docker push saddu/sample-web-app:myapp
+
+			docker login
+
+			username:
+			password:
+			Login Succeeded
+
+
+			docker image prune --all --force
+			docker pull saddu/sample-web-app:myapp
+			
+
+			==============================================================
+
+			Step1: docker ---> up and running
+			Step2: images should be created
+			Step3: create account in DockerHub
+			Step4: create a new repository with public access
+			Step5: login into docker ---> docker login
+			Step6: create a tag:
+					docker tag local-image-name username/new-created-repo-name:tagname
+			Step7: push an image to DOcker Hub:
+					docker push username/new-created-repo-name:tagname
+
+
+			-------------------------------------------------------------------
+
+			Finally Image will be listed in docker hub after successfull push.
+			Now image is available for pull ---> docker pull username/new-created-repo-name:tagname
+			
+
+			CI/CD:
+			-----
+				Continiuos Integration /Continious Delivery
+
+				Jenkins
+					The leading open source automation server, 
+					Jenkins provides hundreds of plugins to support building,
+					 deploying and automating any project.
+
+			==========================================================================================================
+			Creating a New Job:
+			DashBoard ---> New Item ----> HelloApp -----> FreeStyle Project -------> OK ---> Select Build Triggers  
+				-----> Build Steps -----> Execute Windows batch command  -> Enter command echo Hello World  ----> SAVE
+
+
+				CI/CD ===>  SCM (Git)   ----->  Jenkins(Docker) ------->  Deploying App in localhost
+
+			===========================================================================================================
+
+			
+
+			Kafka:
+			=====
+				Kafka quickly evolved from messaging queue to a full-fledged event streaming platform capable 
+				of handling over 1 million messages per second, or trillions of messages per day.
+
+					Scalable
+					Fault Tolerant
+					A great publish-subscribe messagins system
+					Durable
+					Reliable
+					High Perfomant
+
+
+				Created New Folder ---> setup 
+							git init
+							git clone git clone https://github.com/conduktor/kafka-stack-docker-compose.git
+
+							docker-compose -f zk-single-kafka-single.yml up -d
+
+							docker exec -it kafka1 /bin/bash
+							 kafka-topics --version
+
+
+
+				Kubernetes:
+				===========
+						automating deployment, scaling, and management of containerized applications.
+						minikube start
+
+						kubectl get po -A
+
+
+						kubectl create deployment hello-minikube --image=docker.io/nginx:1.23
+						kubectl expose deployment hello-minikube --type=NodePort --port=80
+
+
+						to build an image ---->   docker build -t spring-boot-test .
+						minikube start
+						kubectl apply -f .\deployment.yaml
+
+						 minikube dashbaord
+
+						docker tag spring-boot-test saddu/spring-boot-test:latest
+						docker push saddu/spring-boot-test:latest
+
+						
+
+						docker pull saddu/spring-web-kubernetes:my-app
+
+
+		=========================================================================================================================================
+
+
+		Step1: Create a new FOlder --> kubernetes-springboot
+		Step2: Copy our USER-SERVICE code into new folder created(make sure there is no resources folder or applications.yml)
+				kubernetes-springboot --> src
+								controller
+								entity
+								repository
+								service
+								DemoApplication.java
+
+							  pom.xml (JDK --> 1.8)
+
+							  Dockerfile
+								FROM maven:3.8.2-jdk-8
+								WORKDIR /demo
+								COPY . .
+								RUN mvn clean install
+								CMD mvn spring-boot:run
+
+							  deployment.yaml
+		
+		Step3: Docker: build an image:
+				naviagte to location where we have Dockerfile.
+				docker build -t spring-boot-test .
+
+				To verify image is created successfully:
+
+				docker images
+
+				REPOSITORY                    TAG                 IMAGE ID       CREATED         SIZE
+				spring-boot-test              latest              ee7ba49a4352   16 hours ago    697MB
+							  							
+		Step4: Push Image to DockerHub:
+				
+				Docker login
+				create a new Repository in DockerHub with name : spring-boot-test
+				docker tag spring-boot-test saddu/spring-boot-test:latest
+			        docker push saddu/spring-boot-test:latest
+				
+
+				docker images
+				REPOSITORY                    TAG                 IMAGE ID       CREATED         SIZE
+				spring-boot-test              latest              ee7ba49a4352   16 hours ago    697MB
+				saddu/spring-boot-test        latest              ee7ba49a4352   16 hours ago    697MB
+
+		Step5: Make sure that in deployment.yml file Image name is :  
+
+				image: username/repo-name:tag-name
+				image: saddu/spring-boot-test:latest	
+
+		Step6: 	naviagte to location where we have deployment.yml
+			make sure kubctl is up and running else execute : minikube start
+			
+
+
+		Step7: Execute : kubectl apply -f deployment.yaml
+
+				Verify output:
+					service/spring-test-service created
+					deployment.apps/spring-test-app created
+
+		Step8: kubectl get deployments
+			NAME              READY   UP-TO-DATE   AVAILABLE   AGE
+			spring-test-app   2/2     2            2           5s
+
+
+		Step9: minikube service spring-test-service
+
+			
+			|-----------|---------------------|-------------|---------------------------|
+			| NAMESPACE |        NAME         | TARGET PORT |            URL            |
+			|-----------|---------------------|-------------|---------------------------|
+			| default   | spring-test-service |        8080 | http://192.168.49.2:32726 |
+			|-----------|---------------------|-------------|---------------------------|
+			* Starting tunnel for service spring-test-service.
+			|-----------|---------------------|-------------|------------------------|
+			| NAMESPACE |        NAME         | TARGET PORT |          URL           |
+			|-----------|---------------------|-------------|------------------------|
+			| default   | spring-test-service |             | http://127.0.0.1:54848 |
+			|-----------|---------------------|-------------|------------------------|
+
+		Step10:  minikube dashboard
+
+		Step11: In postman:
+				POST   http://127.0.0.1:54848/users/
+					body:
+						{"email":"julie@gmail.com","password":"123456"}
+						  
+				GET   http://127.0.0.1:54848/users/1
+						
+						{"email":"julie@gmail.com","password":"123456"}
+
+
+
+
+
+==============================================================================================================================
+
+		Selenium:
+		========
+			Add selenium IDE extension to chrome
+			
+
+		POM:
+		----
+			Page Object Model
+
+			Login Page
+			Home Page
+			
+			Login.java
+			Home.java
+
+	
+		=====================================================================================================================================
+		DataBase : mysql or mongoDB
+		Business Logic: [Core Java + Kotlin] SpringBoot MicroServices : APIs  [RestTemplate,Euereka CLient-Server,API Gateway,Swagger-UI,Kafka,
+							FiegnClient,Reactive Spring(WebFLux and WebCLient)] 
+		UI - React + BootStrap - jest and enzyme
+		
+		Testing : POM -selenium 
+		Build : Maven or Gradle
+		Deploy : Docker,docker-compose + Jenkins + Kubernetes
+
+		Finally : aws 
+		======================================================================================================================================
+
+		
+
+
+		=> Gatling <- Load Testing
+
+					No of Users   Response Time
+						4        18s        <- Load Testing
+
+					Based on Number of Users ,measuring the Response Time
+		=====================================================================================================================================
+ 
+		=> Launching Multi Node cluster(Building Microservices Arch)
+			Built two images : user-service and product-service
+
+			
+
+
+
+		=> Elastic, FluentD, Kibana
+
+		=> Working with HEML(Package Manager)
+
+		======================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		=====================================================================================================================================
+		=> CSS concepts : 
+			
+			Flexbox
+			Grid
+			keyframes
+			Debugging
+			GITHUB PAGES
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

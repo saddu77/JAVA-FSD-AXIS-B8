@@ -1,0 +1,33 @@
+
+	Case Study : Kotlin
+	===================
+
+	Online Ticket Booking
+	---------------------
+	
+	Passenger Details: passengers
+	------------------
+	     PK
+	  Passenger_ID Passenger_Name Passenger_Age Gender Phone
+	    001           John             23        M    0987654321
+
+	Train Details:  train
+	---------------
+	  PK								     
+	  Train_Id  Train_No  Train_Name  Source   Destination Start_Date_Time      Arrival_Time
+	   1          67543    KK Express  Delhi    Bangalore  03-08-2022 6:00AM   04-08-2022 12:00PM
+
+	Ticket Details: ticket
+	---------------
+          pk                       FK       FK
+	  id   Ticket_Number Passenger_ID Train_ID Ticket_Price
+	  1       67676         001           1        1700
+
+
+	Solution:
+	---------
+
+	Create files:
+			Passenger.kt
+			Train.kt
+			Ticket.kt

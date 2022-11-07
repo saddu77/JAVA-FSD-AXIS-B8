@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./sample1.js">
+
+</script>
+
+<body>
+    <h2> Sample Page</h2>
+        <button type="button" onclick="welcome()">Click Me</button> <br /> <br />
+        <input id="bg" onkeyup="changeBackground()" placeholder="write something" style="color: white;" /> <br /> <br />
+
+        <div id="hov-div" onmouseover="hov()" onmouseout="out()" style="background-color:maroon;height:200px;width: 200px;">
+           
+        </div>
+        <hr>
+
+        <div id="out" onmouseout="out()" style="background-color:orchid;height:200px;width: 200px;">
+           
+        </div>
+
+        <hr>
+        Enter Number : <input type="number" onchange="alert(this.value)"/>
+        <hr/>
+        <img onload="alert('Image loded successfully')" src="../img/flower.jpg" width="200px" height="200px">
+        <hr>
+        <div>
+            <h2> Focus Input Field</h2>
+            <input type="text" id="name" onfocus="focused()" />
+        </div>
+
+        <hr>
+        <div>
+            <h2> On Blur Input Field</h2>
+            <input type="text" id="name" onblur="alert(this.value)" />
+        </div>
+
+</body>
+</html>

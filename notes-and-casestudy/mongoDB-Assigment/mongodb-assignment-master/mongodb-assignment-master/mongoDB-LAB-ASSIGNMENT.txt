@@ -1,0 +1,48 @@
+# Lab Assignment. MongoDB
+
+## The Dataset
+
+The dataset that we are using consists of 
+a MongoDB collection with 88 documents.
+Each document corresponds to a movie, described by 
+the following attributes: title, year,
+genre, summary, country,  director
+and actors.
+The value of the attribute director is  a document that describes
+an artist with the following attributes: first_name,
+last_name, birth_date and role.
+The value of the attribute actors is a list of 
+documents, each describing an artist.
+The values of all the other attributes are strings.#
+
+In order to use MongoDB, you will need to:
+
+1. Launch a MongoDB server.
+2. Import the data into the database.
+3. Launch a MongoDB client. 
+
+## Queries
+
+By using the command-line interface of the client, type the following command to connect 
+to the database movie
+
+```
+use movie
+```
+
+Write and run the following queries:
+
+1. The movies titled "Gladiator".
+2. The distinct genre values of movies.
+3. The movies of "crime" or "drama" genre.
+4. The list of movies directed by "Hitchcock",
+	display only title and year and sort them by year.
+5. The list of movies where "Cotillard" played.
+6. The movies released between 1967 and 1995.
+7. The list of the movies released between 1967 and 1995, 
+	by displaying only title, year, director’s last name sorted by year. 
+8. The number of movies by country.
+9. The number of movies by country and actor.
+
+
+

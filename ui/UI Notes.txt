@@ -1,0 +1,222 @@
+
+	Web Applications:
+	----------------
+		UI : User Interface
+
+		WebPage:
+			which consist of web Elements.
+						input,button,radio,checkbox,p,div,span,image,link etc.....
+		
+		html : Hyper Text Markup Language
+		<> ... </>
+
+		<br />
+		<input />
+
+		example:
+			<html>   </html>
+			<p>  .... </p>
+			<h1> .... </h1>
+
+
+		filename.html
+		-------------
+		hello.html
+
+				<html>
+					<p>... </p>
+				</html>
+		VSCODE to write UI code
+		
+		HTML 1.0
+		HTML2
+		HTML 3.2
+		HTML4.0.1
+		html5: To make web Page Responsive,Dynamic web Sites,SPA: Single Page Apps
+			<!DOCTYPTE html>
+			<meta charset = "UTF-8">   character Encoding
+
+		click or input text or scroll page
+
+		static and dynamic page
+
+		css framework:
+		=============
+				Boot strap
+
+			cdn links:
+		js: To make a web page interactive,dynamic we make use of javascript.
+
+
+		UI:		
+
+			-> sample web Pages
+			-> Adding css
+			-> BootStrap		
+					Profile in BootStrap
+					
+			=============================
+			JS
+
+			variables:
+				var number = 20;
+			JSON:
+			
+			=================================================
+
+			fetch --> POST for signUp
+
+			fetch ---> POST for Login
+
+				Email
+				password
+
+			request ----> API
+				<----
+
+		POSTMAN --->       API -----> DB
+		    UI
+		  Sign Up 
+		html css3 JS   ----> API -----> DB
+
+
+		String array_name[size] = {};
+				  
+				Collection : List,ArrayList,LinkedList,Queue etc....
+					processing accessing performance etc...
+
+		Responsibilites:
+		===============
+				Concept
+					Example <- Online Session 
+					Executions <- Lab Session (9:30 PM to 11:30 PM)
+
+					Task or Assignment + Case Studies <- Off the Session  + weekends
+					
+
+					Assessments or online Tests or Online Coding
+
+
+			Forms:
+			-----
+				SignIn : define a new function in controller to return valid or invalid user.
+
+					 validate user in Login Page  ---> Home Page for valid user
+									   else Login for Invalid User with Prompt(please verify credentials !!!).
+
+				Users:
+					POST API ----> Users(SIgnUP Page)
+					Users:
+						List all Users and display in Table
+							Create,Read,Update and Delete
+
+				NodeJS:
+				-------
+					npm: Node package Manager
+				node --v
+				npm --v
+
+				npx create-react-app hello-app
+	
+				cd hello-app
+				npm start
+
+				SPAs : Single Page Applications
+
+
+				html5 css3 and js(JS DOM)
+					relaoding
+
+				React
+				 	reponsive,dynamic ,SPA,ReactDOM
+					rendering
+						
+				JSX 
+
+				Routing:
+				------
+
+				localhost:3000/login
+				localhost:3000/signup
+				localhost:3000/home
+
+				npm install react-router-dom
+				
+				Hooks in React:
+			
+				const [email,setEmail] = useState('');
+
+
+				To add bootstrap in React:
+						npm install react-bootstrap bootstrap
+
+						
+		Development Server or Staging Server
+		Realtime or Client or Production Server.
+			
+		The React Framework for Production
+		Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering,
+			 TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
+
+		npm install next react react-dom
+		npm init
+		create a new folder pages in app
+			create a new file index.js
+
+		update in package.json ---> "dev":"next",	
+			
+
+		npm run dev
+
+
+		Data Fetching Methods:
+		getStaticProps,getStaticPaths,getServerSideProps:
+
+		Testing ReactJS Application with Jest & Enzyme:
+		===============================================
+
+		Unit Testing
+
+
+		public int addition(int x,int y){
+		  return x + y;
+		}
+
+		int res = addition(20,20);
+		System.out.println(res);
+
+		input -> 20 + 20
+		output -> 40
+
+		actual result with expected result
+
+		0 -> click -> 0 + 1 = 1
+
+
+		npm install enzyme enzyme-adapter-react-16 --force
+
+		new file name :  *.test.js --->  Counter.test.js
+
+		Testing:
+		-------
+			Addition component
+			Unit Test : validate the same using enzyme
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

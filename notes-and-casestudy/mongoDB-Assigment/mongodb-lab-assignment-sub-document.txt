@@ -1,0 +1,60 @@
+# Lab Assignment. MongoDB
+
+## The Dataset
+
+db: bookingsdb
+collections: passenger :
+		{
+		  passenger_name:'John',
+		  passenger_age:21,
+		  passenger_gender:M,
+		  passenger_phone:'0987654321'
+                  passenger_city:'Bengaluru',
+	          passenger_state:'KA',
+		  passenger_pincode:'560004',
+		  passenger_country:'India'
+		}
+
+             trains:
+		{
+		 train_no:'09876',
+		 train_name: 'KK Express',
+		 source:'Bengaluru',
+		 destination:'Delhi',
+		 start_time:'9:00 AM',
+		 start_date:'26-08-2022',
+                 arrival_time:'10:00 PM',
+		 arrival_date:'27-08-2022'
+		}		
+             
+
+		tickets:
+			{
+			  ticket_number:'TK00987',
+			  ticket_date:'24-08-2022',
+			  ticket_price:3500,
+			  "passenger" :
+			   {
+			   	passenger_name:'John',
+		  		passenger_age:21,
+		  		passenger_gender:M,
+		  		passenger_phone:'0987654321'
+                  		passenger_city:'Bengaluru',
+	          		passenger_state:'KA',
+		  		passenger_pincode:'560004',
+		  		passenger_country:'India'
+			   }
+
+             		"trains":
+			 {
+		 		train_no:'09876',
+		 		train_name: 'KK Express',
+		 		source:'Bengaluru',
+		 		destination:'Delhi',
+		 		start_time:'9:00 AM',
+		 		start_date:'26-08-2022',
+                 		arrival_time:'10:00 PM',
+		 		arrival_date:'27-08-2022'
+			}	
+		}
+
